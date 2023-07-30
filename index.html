@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/09a85ebd29.js" crossorigin="anonymous"></script>
+    <title>Password</title>
+</head>
+<body>
+    <div class="input-box">
+        <input type="text" placeholder="Enter password" id="password">
+        <i class="fa-solid fa-eye-slash" id="eyes-icon"></i> 
+    </div>
+
+    <script>
+
+        let password = document.getElementById("password");
+        let eyesIcon = document.getElementById("eyes-icon");
+
+        eyesIcon.onclick = function(){
+            if(password.type == "password"){
+                password.type = "text";
+                eyesIcon.classList = "fa-solid fa-eye-slash";
+            }else{
+                password.type = "password";
+                eyesIcon.classList ="fa-solid fa-eye"
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
